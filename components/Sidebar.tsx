@@ -3,7 +3,10 @@ import Link from 'next/link';
 import GoogleLogin from 'react-google-login';
 import { AiFillHome, AiOutlineMenu } from 'react-icons/ai';
 import { ImCancelCircle } from 'react-icons/im';
+
 import { Discover } from './Discover';
+import { SuggestedAccounts } from './SuggestedAccounts';
+import { Footer } from './Footer/Footer';
 
 export const normalLink =
   'flex gap-3 items-center hover:bg-gray-200 p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#F51997] rounded';
@@ -63,6 +66,8 @@ export const Sidebar = () => {
             </div>
           )}
           <Discover />
+          <SuggestedAccounts />
+          <Footer />
         </div>
       )}
     </div>
