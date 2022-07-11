@@ -21,12 +21,16 @@ export const Discover = () => {
       <div className="flex gap-3 flex-wrap select-none">
         {topics.map((item) => (
           <Link href={`/?topic=${item.name}`} key={item.name}>
-            <div
-              className={topic === item.name ? activeTopicStyle : topicStyle}
-            >
-              <span>{item.icon}</span>
-              <span className="text-sm hidden xl:block">{item.name}</span>
-            </div>
+            <a>
+              <div
+                className={topic === item.name ? activeTopicStyle : topicStyle}
+              >
+                <span>{item.icon}</span>
+                <span className="text-sm font-semibold hidden xl:block">
+                  {item.name}
+                </span>
+              </div>
+            </a>
           </Link>
         ))}
       </div>

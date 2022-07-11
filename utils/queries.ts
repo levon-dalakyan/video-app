@@ -1,19 +1,19 @@
 export const allPostsQuery = () => {
   const query = `*[_type == "post"] | order(_createdAt desc){
     _id,
-     caption,
-       video{
-        asset->{
-          _id,
-          url
-        }
-      },
-      userId,
-      postedBy->{
-        _id,
-        userName,
-        image
-      },
+		caption,
+		video{
+			asset->{
+				_id,
+				url
+			}
+		},
+		userId,
+		postedBy->{
+			_id,
+			userName,
+			image
+		},
     likes,
     comments[]{
       comment,
@@ -22,7 +22,7 @@ export const allPostsQuery = () => {
       _id,
       userName,
       image
-    },
+    	},
     }
   }`;
 
@@ -45,14 +45,14 @@ export const postDetailQuery = (postId: string | string[]) => {
       userName,
       image
     },
-     likes,
+    likes,
     comments[]{
       comment,
       _key,
       postedBy->{
         _ref,
       _id,
-    },
+    	},
     }
   }`;
   return query;
@@ -82,7 +82,7 @@ likes,
       _id,
       userName,
       image
-    },
+    	},
     }
   }`;
   return query;
@@ -116,7 +116,7 @@ export const userCreatedPostsQuery = (userId: string | string[]) => {
       userName,
       image
     },
- likes,
+ 		likes,
 
     comments[]{
       comment,
@@ -125,7 +125,7 @@ export const userCreatedPostsQuery = (userId: string | string[]) => {
       _id,
       userName,
       image
-    },
+    	},
     }
   }`;
 
@@ -148,7 +148,7 @@ export const userLikedPostsQuery = (userId: string | string[]) => {
       userName,
       image
     },
- likes,
+ 		likes,
 
     comments[]{
       comment,
@@ -157,7 +157,7 @@ export const userLikedPostsQuery = (userId: string | string[]) => {
       _id,
       userName,
       image
-    },
+    	},
     }
   }`;
 
@@ -180,7 +180,7 @@ export const topicPostsQuery = (topic: string | string[]) => {
       userName,
       image
     },
- likes,
+ 		likes,
 
     comments[]{
       comment,
@@ -189,7 +189,7 @@ export const topicPostsQuery = (topic: string | string[]) => {
       _id,
       userName,
       image
-    },
+    	},
     }
   }`;
 
